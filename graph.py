@@ -3,8 +3,12 @@ import datetime
 import json
 import os
 import traceback
+import trellis
 
-from src.trellis import trellis_in_src as tr
+import exshell as xs
+from pathlib import Path
+PATH_TO_EXSHELL_CONFIG = './exshell_config.toml'
+PATH_TO_EXSHELL_WORKSHEET = './temp/exshell_work.xlsx'
 
 
 def main():
@@ -24,7 +28,17 @@ def main():
 単位は［大グリッド１マス分］です。これはスプレッドシートのセル３つ分です。
 例）　100
 > """)
-            canvas_width_obj = tr.InningsPitched(var_value=canvas_width_var_value)
+
+            # ［エクシェル・ビルダー］生成
+            exshell_builder = xs.ExshellBuilder(
+                    abs_path_to_workbook=Path(PATH_TO_EXSHELL_WORKSHEET).resolve())
+            print('エクシェルはインポートできて、トレリスはインポートできない？')
+            trellis.hello_world3()
+            # t = trellis.Trellis.hello_world()
+            # t = trellis.Trellis()
+            # t.hello_world()
+            # trellis_in_src = trellis.TrellisInSrc()
+            # canvas_width_obj = trellis_in_src.InningsPitched(var_value=canvas_width_var_value)
 
             canvas_height_var_value = input("""\
 これからキャンバスの縦幅を指定してもらいます。
@@ -32,7 +46,7 @@ def main():
 単位は［大グリッド１マス分］です。これはスプレッドシートのセル３つ分です。
 例）　100
 > """)
-            canvas_height_obj = tr.InningsPitched(var_value=canvas_height_var_value)
+            # canvas_height_obj = trellis.trellis_in_src.InningsPitched(var_value=canvas_height_var_value)
 
             json_path_to_write = input("""\
 これから、JSON形式ファイルの書出し先パスを指定してもらいます。
@@ -120,7 +134,7 @@ def main():
 
 
             # ビルド
-            tr.build(
+            tl.build(
                     config_doc=config_doc)
 
         else:

@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "trellis-for-b"
+name = "graph-for-b"
 version = "10001.0.1"
 authors = [
   { name="Takahashi Satoshi", email="muzudho1@gmail.com" },
@@ -26,7 +26,7 @@ classifiers = [
 ]
 
 [project.urls]
-Repository = "https://github.com/muzudho/trellis-for-b.git"
+Repository = "https://github.com/muzudho/graph-for-b.git"
 
 # ビルドツールの設定
 [tool.hatch.build.targets.sdist]
@@ -41,6 +41,6 @@ exclude = [
   "*.bak",          # WinMerge
   "*- コピー*",     # Copy file
   "requirements.txt",
-  "trellis_config.json",
-  "trellis.py",
+  "graph_config.json",
+  "graph.py",
 ]

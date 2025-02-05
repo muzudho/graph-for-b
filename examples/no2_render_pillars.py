@@ -3,8 +3,7 @@
 """
 
 import json
-
-from src.trellis import trellis_in_src as tr
+import trellis as tl
 
 
 # 設定ファイル（JSON形式）
@@ -25,5 +24,5 @@ config_doc['compiler']['objectFilePrefix'] = 'no2'
 
 
 # ビルド
-tr.build(
+tl.build(
         config_doc=config_doc)
