@@ -52,7 +52,19 @@ py graph.py init
         }
     },
     "ruler": {
-        "visible": true
+        "visible": true,
+        "foreground": {
+            "varColors": [
+                "xlPale.xlWhite",
+                "xlDeep.xlWhite"
+            ]
+        },
+        "background": {
+            "varColors": [
+                "xlDeep.xlWhite",
+                "xlPale.xlWhite"
+            ]
+        }
     }
 }
 ```
