@@ -7,6 +7,7 @@
 
 ```shell
 pip install openpyxl
+pip install trelliswork
 ```
 
 
