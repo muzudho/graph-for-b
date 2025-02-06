@@ -3,7 +3,7 @@
 """
 
 import json
-import trellis as tl
+import trelliswork as tl
 
 
 # 設定ファイル（JSON形式）
