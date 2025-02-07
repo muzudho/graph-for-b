@@ -55,7 +55,12 @@
 そして、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+import trelliswork as tl
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![矩形描画](../../img/[20250116-0015]rectangle.png)  
@@ -119,7 +124,11 @@ py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_wo
 そして、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![右と下を使って矩形描画](../../img/[20250116-0020]right-bottom.png)  

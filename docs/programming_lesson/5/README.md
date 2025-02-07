@@ -73,7 +73,12 @@
 そして、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+import trelliswork as tl
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![地面](../../img/[20250121-1158]shadow-0.png)  
@@ -178,7 +183,11 @@ py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_wo
 そして、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![ドロップシャドウ１](../../img/[20250121-1207]shadow-1.png)  
@@ -296,5 +305,9 @@ py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_wo
 そして、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```

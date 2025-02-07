@@ -53,7 +53,12 @@
 そして［プログラミング・レッスン１の手順８］と同様に、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+import trelliswork as tl
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![定規の色を変更](../../img/[20250115-2124]change-ruler-color.png)  
@@ -101,7 +106,11 @@ py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_wo
 そして手順２と同様に、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![紙の地の色に変更](../../img/[20250115-2201]paper-color.png)  
@@ -152,7 +161,11 @@ py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_wo
 そして手順３と同様に、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![紙の地の色に変更](../../img/[20250115-2250]tri-color.png)  
@@ -202,7 +215,11 @@ py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_wo
 そして手順３と同様に、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![紙の地の色に変更](../../img/[20250116-0038]web-safe-color.png)  
