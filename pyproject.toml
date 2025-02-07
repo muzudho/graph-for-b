@@ -14,7 +14,7 @@ requires-python = ">=3.12.3"
 dependencies = [
   "openpyxl>=3.1.5",
   "tomlkit>=0.13.2",
-  "trelliswork==10009.0.3",
+  "trelliswork==10011.0.2",
 ]
 maintainers = [
   { name="Takahashi Satoshi", email="muzudho1@gmail.com" },
