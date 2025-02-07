@@ -128,8 +128,8 @@ right は長方形の右側の外、 bottom は長方形の下側の外である
 
 上述の Innings pitched と VarRectangle はクラスとして実装されています。以下のファイルから探してみてください。  
 
-* 📄 [Trellis ＞ InningsPitched クラス](../../../src/graph/share.py) - 正規表現 `class\s+InningsPitched` で検索してください  
-* 📄 [Trellis ＞ VarRectangle クラス](../../../src/graph/shared_models/depth130/rectangle.py) - 正規表現 `class\s+VarRectangle` で検索してください  
+* 📄 [Trelliswork ＞ InningsPitched クラス](https://github.com/muzudho/trelliswork/blob/main/src/trelliswork/shared_models/depth120/innings_pitched.py) - 正規表現 `class\s+InningsPitched` で検索してください  
+* 📄 [Trelliswork ＞ VarRectangle クラス](https://github.com/muzudho/trelliswork/blob/main/src/trelliswork/shared_models/depth130/var_rectangle.py) - 正規表現 `class\s+VarRectangle` で検索してください  
 
 
 ## 手順７
