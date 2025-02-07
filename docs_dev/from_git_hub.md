@@ -43,8 +43,22 @@ py example.py all
 自動生成ファイルを入れておくための、 📁 `./temp` というディレクトリーも作っておいてください。  
 ファイル名が被って上書きされたり、削除されたりしても困らないフォルダーとして使います。  
 
-以下のコマンドを打鍵してください。  
+以下のコマンドを打鍵してください。
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+py
+```
+
+👆　あるいは、`python` や `python3` といったコマンドかもしれません。環境に合わせてください。  
+以降、インタープリターのモードに入ります。  
+
+以下のスクリプトを打鍵してください。  
+
+```py
+import trelliswork as tl
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
