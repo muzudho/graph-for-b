@@ -24,5 +24,5 @@ config_doc['compiler']['objectFilePrefix'] = 'no4'
 
 
 # ビルド
-tl.build(
+tl.build_by_config_doc(
         config_doc=config_doc)
