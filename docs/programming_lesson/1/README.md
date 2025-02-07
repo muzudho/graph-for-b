@@ -91,10 +91,14 @@ exit()
 
 ## 手順５
 
-以下のコマンドを打鍵してください。
+Python のインタープリターを使って、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./graph_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 📄 `./temp/lesson/hello_world.xlsx` ファイルが作成されています。確認してください（下図）  
@@ -167,7 +171,19 @@ right は長方形の右側の外、 bottom は長方形の下側の外である
         }
     },
     "ruler": {
-        "visible": true
+        "visible": true,
+        "foreground": {
+            "varColors": [
+                "xlPale.xlWhite",
+                "xlDeep.xlWhite"
+            ]
+        },
+        "background": {
+            "varColors": [
+                "xlDeep.xlWhite",
+                "xlPale.xlWhite"
+            ]
+        }
     }
 }
 ```
@@ -177,7 +193,11 @@ right は長方形の右側の外、 bottom は長方形の下側の外である
 そして以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![投球回を使って指定した定規](../../img/[20250115-0056]ruler-left-right-using-innings-pitched.png)  
@@ -215,7 +235,11 @@ py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_wo
 手順７と同様に、以下のコマンドを打鍵してください。  
 
 ```shell
-py graph.py build --config ./trellis_config.json --source ./temp/lesson/hello_world.json --temp ./temp --output ./temp/lesson/hello_world.xlsx
+tl.Trellis.build(
+    config='./trellis_config.json',
+    content='./temp/lesson/hello_world.json',
+    temp_dir='./temp',
+    workbook='./temp/lesson/hello_world.xlsx')
 ```
 
 ![定規を非表示](../../img/[20250115-1900]invisible-ruler.png)  

@@ -24,5 +24,5 @@ config_doc['compiler']['objectFilePrefix'] = 'no5'
 
 
 # ビルド
-tl.build_by_config_doc(
+tl.Trellis.build_by_config_doc(
         config_doc=config_doc)

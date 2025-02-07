@@ -20,11 +20,11 @@ def main():
             tl.init()
 
         elif args.command == 'build':
-            build_by_command(
-                    config_doc_path_to_read=args.config,    # json path
-                    contents_doc_path_to_read=args.source,  # json path
-                    wb_path_to_write=args.output,
-                    temporary_directory_path=args.temp)
+            tl.Trellis.build(
+                    config=args.config,    # json path
+                    content=args.source,  # json path
+                    workbook=args.output,
+                    temp_dir=args.temp)
 
         else:
             raise ValueError(f'unsupported command: {args.command}')
@@ -38,51 +38,6 @@ def main():
 以下はスタックトレース表示じゃ。
 {traceback.format_exc()}
 """)
-
-
-def build_by_command(
-        config_doc_path_to_read,
-        contents_doc_path_to_read,
-        wb_path_to_write,
-        temporary_directory_path):
-
-    if not config_doc_path_to_read:
-        print(f"""ERROR: build コマンドには --config オプションを付けて、トレリスの設定が書かれた JSON ファイルへのパスを指定してください""")
-        return
-
-    if not contents_doc_path_to_read:
-        print(f"""ERROR: build コマンドには --source オプションを付けて、描画の設定が書かれた JSON ファイルへのパスを指定してください""")
-        return
-
-    if not temporary_directory_path:
-        print(f"""ERROR: build コマンドには --temp オプションを付けて、（消えても構わないファイルを入れておくための）テンポラリー・ディレクトリーのパスを指定してください""")
-        return
-
-
-    # ソースファイル（JSON形式）を読込
-    print(f"🔧　read {config_doc_path_to_read} file")
-    with open(config_doc_path_to_read, encoding='utf-8') as f:
-        config_doc = json.load(f)
-
-
-    # コマンドライン引数で設定を上書き
-    if 'builder' not in config_doc:
-        config_doc['builder'] = {}
-    
-    config_doc['builder']['--source'] = contents_doc_path_to_read
-
-    if 'compiler' not in config_doc:
-        config_doc['compiler'] = {}
-
-    if 'renderer' not in config_doc:
-        config_doc['renderer'] = {}
-
-    config_doc['renderer']['--output'] = wb_path_to_write
-
-
-    # ビルド
-    tl.build_by_config_doc(
-            config_doc=config_doc)
 
 
 ########################################
