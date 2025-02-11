@@ -6,12 +6,12 @@
 ```json
 {
     "builder": {
-        // bulider."--source" は廃止予定。 compiler.source へ移行予定
-        "--source": "./source.json"
+        // trelliswork:10012.0.1 - bulider."--source" は廃止。 compiler.source へ移行
+        // "--source": "./source.json"
     },
     "compiler": {
         // 新しい仕様予定
-        "source": "./source.json"
+        "source": "./examples/sources/compiler-tutorial-o1o0-empty.json"
     },
     "renderer": {
         

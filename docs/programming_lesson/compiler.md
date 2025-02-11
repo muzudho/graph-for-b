@@ -87,9 +87,9 @@ py
 import trelliswork as tl
 tl.Trellis.compile(
     config='./temp/lesson/config.json',
-    content='./temp/lesson/piyo.json')
+    source='./temp/lesson/piyo.json')
 ```
 
-👆 content で指定したファイルが読込、上書きの両方される。  
+👆 config, source で指定したファイルのどちらも読込だけ。書込みはされない。  
 TODO 出力ファイルも指定したい
 FIXME 動作しなかった
