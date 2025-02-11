@@ -85,7 +85,8 @@ py
 
 ```py
 import trelliswork as tl
-tl.Trellis.compile(
+tc = tl.Compiler()
+tc.compile(
     config='./temp/lesson/config.json',
     source='./temp/lesson/piyo.json')
 ```

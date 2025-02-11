@@ -14,10 +14,11 @@ py
 
 以下のスクリプトを打鍵してください。  
 
-```shell
+```py
 import trelliswork as tl
-tl.Trellis.compile(
-    config='./examples/configurations/compiler-tutorial-o1o0.json',
+tc = tl.Compiler()
+tc.compile(
+    config='./examples/configurations/compiler-tutorial-o1o0-empty.json',
     source='./examples/sources/compiler-tutorial-o1o0-empty.json')
 ```
 
@@ -26,8 +27,8 @@ tl.Trellis.compile(
 Output:  
 
 ```plaintext
-🔧　read ./examples/configurations/compiler-tutorial-o1o0.json config file
-🔧　read ./examples/sources/compiler-tutorial-o1o0-empty.json source file
+🔧　read ./examples/configurations/compiler-tutorial-o1o0-empty.json config file.
+🔧　read ./examples/sources/compiler-tutorial-o1o0-empty.json source file.
 ```
 
 👆　２つのファイルを読み込んだことが分かります。  
