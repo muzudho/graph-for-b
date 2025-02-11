@@ -1,8 +1,8 @@
 {
     "builder": {
-        "--source": "./examples/data_of_contents/battle_sequence_of_unfair_cointoss.step1_full_manual.json"
     },
     "compiler": {
+        "source": "./examples/data_of_contents/battle_sequence_of_unfair_cointoss.step1_full_manual.json",
         "objectFolder": "./temp/examples",
         "objectFilePrefix": null,
         "translationOrder": [
