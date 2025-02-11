@@ -20,7 +20,7 @@ with open(file_path_of_config_doc, encoding='utf-8') as f:
 
 
 # 設定ファイルを加工
-config_doc['compiler']['objectFilePrefix'] = 'no3'
+config_doc['compiler']['prefixForObjectFiles'] = 'no3'
 
 
 # ビルド

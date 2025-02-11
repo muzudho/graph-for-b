@@ -3,15 +3,15 @@
 
     },
     "compiler": {
-        "objectFolder": "./temp/objects",
-        "objectFilePrefix": null,
-        "translationOrder": [
+        "folderForObjects": "./temp/objects",
+        "prefixForObjectFiles": null,
+        "orderOfParts": [
             "imports",
             "resolveVarBounds",
             "autoSplitSegmentByPillar",
             "autoShadow"
         ],
-        "tlanslators": {
+        "parts": {
             "autoSplitSegmentByPillar": {
                 "enabled": true,
                 "objectFile": {

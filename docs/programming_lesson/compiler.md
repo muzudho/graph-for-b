@@ -52,11 +52,11 @@
 
     },
     "compiler": {
-        "objectFolder": "./temp/objects",
-        "translationOrder": [
+        "folderForObjects": "./temp/objects",
+        "orderOfParts": [
             "imports"
         ],
-        "tlanslators": {
+        "parts": {
             "imports": {
                 "enabled": true,
                 "objectFile": {

@@ -3,15 +3,15 @@
     },
     "compiler": {
         "source": "./examples/data_of_contents/battle_sequence_of_unfair_cointoss.step4_auto_shadow.json",
-        "objectFolder": "./temp/examples",
-        "objectFilePrefix": null,
-        "translationOrder": [
+        "folderForObjects": "./temp/examples",
+        "prefixForObjectFiles": null,
+        "orderOfParts": [
             "imports",
             "resolveVarBounds",
             "resolveAliasOfColor",
             "autoShadow"
         ],
-        "tlanslators": {
+        "parts": {
             "autoShadow": {
                 "enabled": true,
                 "objectFile": {

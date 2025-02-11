@@ -1,0 +1,17 @@
+{
+    "compiler": {
+        "folderForObjects": "./temp/examples",
+        "orderOfParts": [
+            "imports"
+        ],
+        "parts": {
+            "imports": {
+                "enabled": true,
+                "objectFile": {
+                    "write": true,
+                    "suffix": "after_imports"
+                }
+            }
+        }
+    }
+}
