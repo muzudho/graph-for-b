@@ -12,7 +12,7 @@ py
 👆　あるいは、`python` や `python3` といったコマンドかもしれません。環境に合わせてください。  
 以降、インタープリターのモードに入ります。  
 
-以下のスクリプトを打鍵してください。  
+インタープリターのモードで、以下のスクリプトを打鍵してください。  
 
 ```py
 import trelliswork as tl
@@ -22,7 +22,9 @@ tc.compile(
     source='./examples/sources/compiler-tutorial-o1o0-empty.json')
 ```
 
-次のような出力が表示されます。  
+config と source のファイルの中身を確認しておいてください。  
+
+以下のような出力が表示されます。  
 
 Output:  
 
@@ -39,3 +41,35 @@ Output:
 
 コンパイラーは設定ファイルで機能を追加することで使っていきます。  
 
+インタープリターのモードで、以下のスクリプトを打鍵してください。  
+
+```py
+import trelliswork as tl
+tc = tl.Compiler()
+tc.compile(
+    config='./examples/configurations/compiler-tutorial-o2o0-imports.json',
+    source='./examples/sources/compiler-tutorial-o2o0-imports.json')
+```
+
+config と source のファイルの中身を確認しておいてください。  
+
+以下のような出力が表示されます。  
+
+Output:  
+
+```plaintext
+🔧　read ./examples/configurations/compiler-tutorial-o2o0-imports.json config file.
+🔧　read ./examples/sources/compiler-tutorial-o2o0-imports.json source file.
+🔧　import ./examples/sources/hoge.json file.
+🔧　write ./temp/examples\compiler-tutorial-o2o0-imports__after_imports.json object file.
+    comment='imports'
+```
+
+👆 📄 `./temp/examples\compiler-tutorial-o2o0-imports__after_imports.json` ファイルの中身を確認してください。  
+以下のようになっていればＯｋです。  
+
+```json
+{
+    "hoge": "hooooooge"
+}
+```

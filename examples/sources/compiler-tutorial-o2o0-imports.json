@@ -1,0 +1,5 @@
+{
+    "imports": [
+        "./examples/sources/hoge.json"
+    ]
+}
